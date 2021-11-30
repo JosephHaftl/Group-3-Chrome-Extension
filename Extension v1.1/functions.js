@@ -1,3 +1,5 @@
+
+
 //code to avoid inline script
 document.addEventListener('DOMContentLoaded', function() {
    document.getElementById("checkSource").addEventListener("click", checkSource);
@@ -41,14 +43,23 @@ document.addEventListener('DOMContentLoaded', function() {
 function checkText(){
    document.getElementById("search").style.display = "inline";
 }
- //code to avoid inline script
- document.addEventListener('DOMContentLoaded', function() {
-   document.getElementById("logIn").addEventListener("click", login);
- });
-//script for login buttopn
- function login(){
 
- }
- 
+//login functions
+  document.getElementById("signIn").addEventListener('click', function () {
+    document.getElementById("signIn").addEventListener("click" , 
+    chrome.runtime.sendMessage({ message: 'login' }, function (response) {
+        if (response === 'success') window.close();
+    }));
+  });
+
+
+
+
+
+
+
+
+
+
 
 

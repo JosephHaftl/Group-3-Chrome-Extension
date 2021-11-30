@@ -3,15 +3,18 @@
     "name" : "Extension v1",
     "description": "Test Extension",
     "version": "1.0.0",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuPlpMY5bFtnLHDVDIDsr3ASj/MaQjrDef/H6P+DPMSp3Fs916K1ZQ/32vBQALRYU+O+HznPRlYB55iXIU8K30u14kPJLR67uQFH8cFNWXXeDJirsvTVGnqvUMiT5bXjY0H9ROcf4n1Qp3NqeyyMvvlu/Zgk2kTJk6q1N3UijnVoXT4170TTIRdrtepvv73ifSig0McWReye0vRo6OgpbWG9nC4HnJTrMuoZqHhOmXh7Fu+kIbmvCP0lwuUOHy2svU8abcfw3Ac+0LU/1FvcoL/nq5Uhm+uu2jj8bJu8Xv+1xW7uwTdGvbiUIsQerP/v79nHqmR3Yp6tABSaDseUvvwIDAQAB",
     "icons": {"128": "icon_128.png"},
     "background":{
-        "scripts": ["./background.js"]
+        "scripts": ["./background.js",
+                    "./jsrsasign-all-min.js"
+                ]
     },
     "browser_action": {
         "default_icon": "icon.png",
         "default_popup": "popup.html"
     },
-    "permissions": ["activeTab", "tabs","https://www.google.com/*"],
+    "permissions": ["activeTab" , "tabs" , "https://www.google.com/*" , "identity"],
    
     "content_scripts": [
         {
